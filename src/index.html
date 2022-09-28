@@ -1,29 +1,178 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
-    <link rel="shortcut icon" href="./4geeks.ico" />
-  </head>
-  <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
-      </div>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/eff67208c4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="card d-flex justify-content-start">
+        <div class="card-header">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col">
+                        <h3 class="d-flex justify-content-start">Payment form example</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="card-body">
+            <form id="formulario">
+                <div class="col-12">
+                    <div class="container text-center">
+                        <div class="row  d-flex justify-content-start">
+                            <!-- alert -->
+                            <div class="col-12 alert alert-danger" role="alert">
+                                Some fields are missing
+                            </div>
+                            <!-- end alert -->
+                        </div>
+                    </div>
+                    <!-- primer grid -->
+                    <div class="container text-center">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="col" id="cardContainer" role="alert">
+                                    <label for="card" class="form-label d-flex justify-content-start">Card#</label>
+                                    <input id="card" type="number" placeholder="XXXXXXXXXXXXXXX" class="form-control" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="col" id="cvcContainer">
+                                    <label for="cvc" class="form-label d-flex justify-content-start">CVC#</label>
+                                    <input id="cvc" type="number" class="form-control" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="col" id="amountContainer">
+                                    <label for="amount" class="form-label d-flex justify-content-start">Amount</label>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text">$</span>
+                                        <input id="amount" type="number" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- segundo grid -->
+                        <div class="container text-center">
+                            <div class="row row-cols-3">
+                                <div class="col-6">
+                                    <div class="col" id="nameContainer">
+                                        <label for="nombre" class="form-label d-flex justify-content-start">First Name</label>
+                                        <input id="nombre" type="text" class="form-control" aria-describedby="emailHelp">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="col" id="lastNameContainer">
+                                        <label for="apellido" class="form-label d-flex justify-content-start">Last
+                                            Name</label>
+                                        <input id="apellido" type="text" class="form-control" aria-describedby="emailHelp">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- tercer grid -->
+                    <div class="container text-center">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="col" id="cityContainer">
+                                    <label for="city" class="form-label d-flex justify-content-start">City</label>
+                                    <input id="city" type="text" class="form-control" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="col" id="stateContainer">
+                                    <label for="inputState" class="form-label d-flex justify-content-start">State</label>
+                                    <select id="inputState" class="form-select">
+                                        <option>Choose...</option>
+                                        <option>Colonia</option>
+                                        <option>Artigas</option>
+                                        <option>Salto</option>
+                                        <option>Paysandu</option>
+                                        <option>Rio Negro</option>
+                                        <option>San Jose</option>
+                                        <option>Canelones</option>
+                                        <option>Montevideo</option>
+                                        <option>Mandonado</option>
+                                        <option>Rocha</option>
+                                        <option>Durazno</option>
+                                        <option>Florida</option>
+                                        <option>Flores</option>
+                                        <option>Treinta y Tres</option>
+                                        <option>Tacuarembo</option>
+                                        <option>Cerro Largo</option>
+                                        <option>Rivera</option>
+                                        <option>Soriano</option>
+                                        <option>Lavalleja</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="col" id="postalCodeContainer">
+                                    <label for="postalCode" class="form-label d-flex justify-content-start">Postal
+                                        code</label>
+                                    <input id="postalCode" type="number" class="form-control" aria-describedby="emailHelp">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cuarto grid -->
+                    <div class="container text-center">
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="col" id="optionsContainer">
+                                    <p>We accept:</p>
+                                    <div class="text-bg-secondary p-3">
+                                        <div class="form-check form-check-inline">
+                                            <input id="selectCard1" class="form-check-input" type="radio" name="inlineRadioOptions" value="Mastercard">
+                                            <label class="form-check-label" for="selectCard1"><i class="fa-brands fa-cc-mastercard"></i></label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input id="selectCard2" class="form-check-input" type="radio" name="inlineRadioOptions" value="Visa">
+                                            <label class="form-check-label" for="selectCard2"><i class="fa-brands fa-cc-visa"></i></label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input id="selectCard3" class="form-check-input" type="radio" name="inlineRadioOptions" value="Diners">
+                                            <label class="form-check-label" for="selectCard3"><i class="fa-brands fa-cc-diners-club"></i></label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input id="selectCard4" class="form-check-input" type="radio" name="inlineRadioOptions" value="Amex">
+                                            <label class="form-check-label" for="selectCard4"><i class="fa-brands fa-cc-amex"></i></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <!-- Column -->
+                            </div>
+                            <div class="col-6">
+                                <div class="col" id="messageContainer">
+                                    <span class="form-label d-flex justify-content-start">Message</span>
+                                    <textarea class="form-control d-flex justify-content-end" id="mensaje" aria-label="With textarea"></textarea>
+                                    <h6 class="d-flex justify-content-start">Add any notes here.</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-end">
+                        <button type="reset" class="btn btn-secondary">Cancel</button>
+                        <button type="submit" class="btn btn-primary" id="sendBtn">Send</button>
+                    </div>
+
+
+            </form>
+        </div>
     </div>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+</body>
+
 </html>
